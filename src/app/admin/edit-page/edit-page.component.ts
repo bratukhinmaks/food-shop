@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
 import {switchMap} from 'rxjs/operators';
-import {ProductService} from '../../shared/product.service';
+import {ProductService} from '../../shared/services/product.service';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {Product} from '../../shared/interfaces';
 

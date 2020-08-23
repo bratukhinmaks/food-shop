@@ -1,5 +1,5 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {ProductService} from '../../shared/product.service';
+import {ProductService} from '../../shared/services/product.service';
 import {Subscription} from 'rxjs';
 
 @Component({
@@ -37,8 +37,6 @@ export class DashboardPageComponent implements OnInit, OnDestroy {
       }
     )
   }
-  edit(prod) {
-    this.prodSer.updateItem(prod);
-  }
+
 
 }

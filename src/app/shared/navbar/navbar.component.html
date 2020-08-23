@@ -1,17 +1,14 @@
 <nav class="navbar bg-success">
-  <h2 routerLink="/">Shop</h2>
+  <h2 routerLink="/">Recrut Task</h2>
   <ul>
     <li routerLinkActive="active">
-      <a>Main Dish</a>
+      <a (click)="setType('main')">Main Dish</a>
     </li>
     <li routerLinkActive="active">
-      <a>Salads</a>
+      <a (click)="setType('salads')">Salads</a>
     </li>
     <li routerLinkActive="active">
-      <a>Soups</a>
-    </li>
-    <li routerLinkActive="active" >
-      <a routerLink="/cart">Cart</a>
+      <a (click)="setType('soups')">Soups</a>
     </li>
   </ul>
 </nav>

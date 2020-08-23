@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {environment} from '../../environments/environment';
+import {environment} from '../../../environments/environment';
 import {map} from 'rxjs/operators';
-import {FbResponce, Product} from './interfaces';
+import {FbResponce, Product} from '../interfaces';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-
+  cat = 'main';
   constructor(private http: HttpClient,) { }
   create(product) {
     return this.http.post(`${environment.DbUrl}/products.json`, product)
@@ -58,6 +58,9 @@ export class ProductService {
           date: new Date(res.date)
         }
       }))
+  }
+  setType (cat) {
+    this.cat = cat
   }
 }
 

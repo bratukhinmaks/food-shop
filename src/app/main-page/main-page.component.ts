@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductService} from '../shared/product.service';
+import {ProductService} from '../shared/services/product.service';
 
 @Component({
   selector: 'app-main-page',
@@ -8,6 +8,7 @@ import {ProductService} from '../shared/product.service';
 })
 export class MainPageComponent implements OnInit {
   products$;
+  productName: string;
   constructor(private prodSer: ProductService) { }
 
   ngOnInit() {

@@ -6,13 +6,15 @@ import {RoutingModule} from './routing.module';
 import { MainLayoutComponent } from './shared/main-layout/main-layout.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { ProductPageComponent } from './product-page/product-page.component';
-import { CartPageComponent } from './cart-page/cart-page.component';
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import {AdminModule} from './admin/admin.module';
 import {HTTP_INTERCEPTORS, HttpClient, HttpClientModule} from '@angular/common/http';
 import {QuillModule} from 'ngx-quill';
 import {AuthIntersaptor} from './shared/auth.intersaptor';
 import {DishComponent} from './dish/dish.component';
+import {FormsModule} from '@angular/forms';
+import {FilterPipe} from './shared/pipes/filter.pipe';
+
 
 
 @NgModule({
@@ -21,16 +23,17 @@ import {DishComponent} from './dish/dish.component';
     MainLayoutComponent,
     MainPageComponent,
     ProductPageComponent,
-    CartPageComponent,
     NavbarComponent,
+    FilterPipe,
     DishComponent,
   ],
   imports: [
     BrowserModule,
     RoutingModule,
     HttpClientModule,
-    QuillModule.forRoot()
-
+    QuillModule.forRoot(),
+    FormsModule,
+    AdminModule,
   ],
   providers: [
     {
